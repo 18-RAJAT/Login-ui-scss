@@ -1,0 +1,190 @@
+@import "_variable.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Poppins;
+}
+
+body {
+    margin: auto;
+    max-width: 1170px;
+    height: 100vh;
+    background-color: $bg;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+
+    a {
+        text-decoration: none;
+        color: $white;
+    }
+
+    .container-left {
+        position: relative;
+        margin: 4vh 0px;
+        width: 50%;
+        height: 92vh;
+        border-radius: 8px;
+        background: $gradient_1;
+
+        img {
+            position: absolute;
+            top: 40px;
+            left: -60px;
+        }
+    }
+
+    .container-right {
+        position: relative;
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        color: $white;
+
+        .register {
+            position: absolute;
+            margin-top: 4vh;
+            right: 0;
+            top: 0;
+            font-size: 10px;
+            cursor: default;
+
+            span {
+                cursor: pointer;
+                color: $purple_font;
+            }
+        }
+
+        a {
+            font-size: 12px;
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        h2 {
+            margin-top: 32px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .input {
+            position: relative;
+            margin: 48px 0 40px 0;
+
+            input {
+                padding-left: 8px;
+                max-width: 274px;
+                width: 100%;
+                height: 56px;
+                border-radius: 8px;
+                outline: none;
+            }
+
+            input:nth-child(2) {
+                margin-top: 40px;
+            }
+        }
+
+        .forgot {
+            width: 312px;
+            text-align: right;
+            cursor: pointer;
+        }
+
+        .button-login {
+            margin: 40px 0 48px 0;
+
+            button {
+                width: 274px;
+                height: 56px;
+                font-size: 16px;
+                border-radius: 8px;
+                cursor: pointer;
+                background: $gradient_2;
+                color: $white;
+            }
+        }
+
+        .another-login {
+            .btn:hover {
+                border: 0;
+                box-shadow: $box;
+                transition: ease-out 0.8s;
+            }
+
+            a:first-child {
+                position: relative;
+                cursor: default;
+            }
+
+            a::before,
+            a::after {
+                position: absolute;
+                width: 78px;
+                height: 1px;
+                top: 8px;
+                right: 110px; //98+12
+                content: "";
+                background: $white;
+            }
+
+            a::after {
+                right: 0;
+                left: 110px;
+            }
+
+            .btn_another-login {
+                display: flex;
+                width: 280px;
+                justify-content: space-between;
+
+                a::before,
+                a::after {
+                    display: none;
+                }
+
+                .btn {
+                    display: flex;
+                    width: 70px;
+                    height: 40px;
+                    margin-top: 40px;
+                    border: $border;
+                    border-radius: 8px;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+
+                    a,
+                    img {
+                        width: 25px;
+                        height: 25px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1169px) {
+    .container {
+        .container-left {
+            display: none;
+        }
+
+        .container-right {
+            margin: auto;
+            width: 90%;
+        }
+    }
+}
